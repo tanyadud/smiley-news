@@ -1,0 +1,50 @@
+ .terms-and-conditions {
+   color: #121212;
+   padding-bottom: 50px;
+
+   .container {
+     max-width: 1040px;
+
+     @include xl {
+       padding-left: 64px;
+       padding-right: 64px;
+       box-sizing: border-box;
+     }
+   }
+
+   .terms-title {
+     background: #f8f9fa;
+     padding: 45px 0;
+
+     h2 {
+       font: 600 32px/45px 'Muli', sans-serif;
+       margin: 0;
+     }
+
+   }
+
+   .terms-description {
+     line-height: 1.4;
+     font-family: 'Muli', sans-serif;
+
+     p {
+       margin-top: .7em;
+       margin-bottom: .7em;
+     }
+
+     .p5 {
+       margin-top: 45px;
+     }
+
+     b,
+     strong {
+       font-weight: 800;
+     }
+
+     .ul1 {
+       list-style-type: disc;
+       padding-left: 40px;
+       margin: 16px 0;
+     }
+   }
+ }

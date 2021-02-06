@@ -1,0 +1,122 @@
+ .talk-main-section {
+   @include md {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     padding-left: 15px;
+     margin-bottom: 43px;
+   }
+
+   @include xxl {
+     max-width: 1530px;
+     padding-right: 14px;
+     margin: 0 auto 43px;
+     justify-content: space-between;
+   }
+
+   .talk-content {
+     padding: 0 0 0 15px;
+
+     @include md {
+       width: calc(100% - 375px);
+       width: -moz-calc(100% - 375px);
+       width: -webkit-calc(100% - 375px);
+     }
+
+     @include xxl {
+       max-width: 1159px;
+       padding-bottom: 50px;
+     }
+
+     .selected-search-tags {
+       margin-top: 13px;
+       width: 100%;
+
+       @include lg {
+         margin-top: 0;
+       }
+
+       li {
+         padding: 8px 12px;
+         border-radius: 5000px;
+         background-color: #E4E4E4;
+         color: $default-text;
+         font: 400 12px/16px 'Inter Regular', sans-serif;
+         letter-spacing: 0.4px;
+         display: inline-block;
+         margin: 0 10px 16px 0;
+         cursor: pointer;
+       }
+
+       a {
+         text-decoration: none;
+         display: inline-block;
+         vertical-align: bottom;
+       }
+
+       svg {
+         vertical-align: middle;
+         margin-right: 8px;
+       }
+     }
+
+     .smiley-pagination {
+       display: none;
+
+       @include xxl {
+         display: block;
+       }
+     }
+   }
+ }
+
+ .talk-cards-container {
+   @include xxl {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     // justify-content: space-between;
+
+     //  width: 100%;
+     margin-left: -20px;
+     margin-right: -20px;
+
+     .talk-card-wrap {
+       margin-left: 19px;
+       margin-right: 19px;
+     }
+   }
+
+   .owl-item {
+     height: 100%;
+   }
+
+   .owl-dots {
+     text-align: center;
+     margin-top: 21px;
+
+     .owl-dot span {
+       width: 14px;
+       height: 14px;
+       margin: 5px 7px;
+       display: block;
+       transition: .2s ease;
+       border-radius: 50%;
+       background-color: #d8d8d8;
+       outline: none;
+     }
+
+     .owl-dot.active span {
+       background-color: #de1c22;
+     }
+   }
+
+   .talk-card-wrap {
+     align-items: stretch;
+     display: inline-block;
+
+     @include xxl {
+       margin-bottom: 39px;
+     }
+   }
+ }

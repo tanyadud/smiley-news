@@ -1,0 +1,38 @@
+// Article Item
+.article-item {
+  margin-bottom: 5px;
+  text-decoration: none;
+  margin-bottom: 30px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.article-title {
+  color: $default-text;
+  font: 700 20px/32px 'Montserrat Bold', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.article-subtitle {
+  color: #a1a1a1;
+  font: 600 14px/24px 'Montserrat SemiBold', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 11px;
+}
+
+.article-date-location {
+  flex-direction: column;
+
+  .article-location {
+    margin-left: 0px !important;
+    font-size: 12px !important;
+  }
+
+  .article-date {
+    font-size: 12px !important;
+  }
+}

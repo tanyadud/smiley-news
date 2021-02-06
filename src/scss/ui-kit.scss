@@ -1,0 +1,51 @@
+@import "ui/index";
+
+.textual-banner {
+  // background: linear-gradient(to bottom, #8a8b8f, #7c7d81);
+  // background: linear-gradient(to bottom, #a0a5b0, #6e7278);
+  @include padding-top(1.2rem);
+  @include padding-bottom(1.2rem);
+  text-align: center;
+  // color: #fff;
+  color: #393939;
+  padding-left: 15px;
+  padding-right: 15px;
+  // box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .4),
+  // inset 0px -1px 3px 0px rgba(0, 0, 0, .4);
+  // text-shadow: 0 1px 2px black;
+
+  &.textual-banner--contained {
+    max-width: 1530px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-family: "Montserrat Bold", sans-serif;
+    @include font-size(1.5rem);
+    @include margin-bottom(1.2rem);
+  }
+
+  p {
+    @include font-size(1rem);
+    margin-bottom: 0px;
+    font-family: "Montserrat SemiBold";
+    line-height: 1.45;
+
+    &:not(:last-child) {
+      @include margin-bottom(1.3rem);
+    }
+  }
+
+  a {
+    color: #393939;
+    text-decoration: none;
+    border-bottom: 1px solid #393939;
+    transition: border-color .2s;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}

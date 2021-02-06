@@ -1,0 +1,144 @@
+.smiley-network {
+  padding: 0;
+  position: relative;
+
+  @include md {
+    padding-top: 17px;
+
+    &:before {
+      content: '';
+      border-top: 1px solid #E4E4E4;
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      max-width: 1530px;
+    }
+  }
+
+  @include xl {
+    display: flex;
+    flex-direction: row;
+    min-height: 162px;
+  }
+
+  .smiley-network-title-wrap {
+    background-color: #4696d2;
+
+    @include xl {
+      display: flex;
+      align-items: center;
+      padding: 0 40px 0 50px;
+    }
+  }
+
+  .smiley-network-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+
+    svg {
+      width: 160px;
+
+      @include xl {
+        width: 240px;
+        height: auto;
+      }
+    }
+
+    span {
+      color: #fff;
+      font: 600 18px/18px 'Montserrat SemiBold', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 12px;
+      margin-top: -15px;
+
+      @include lg {
+        font: 600 30px/30px 'Montserrat SemiBold', sans-serif;
+        letter-spacing: 16px;
+      }
+    }
+
+    @include xl {}
+  }
+
+  .smiley-network-descr {
+    background: url(/img/homepage/network-mobile-bg.png) no-repeat;
+    background-position: 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px 0 35px;
+
+    @include md {
+      background: url(/img/homepage/network-dt-bg.png) no-repeat;
+      background-size: cover;
+      background-position: 50%;
+    }
+
+    @include xl {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+
+  .network-descr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include xl {
+      align-items: flex-start;
+      text-align: left;
+      padding: 21px 0 29px 45px;
+    }
+  }
+
+  .smiley-network-descr-title {
+    color: #fff;
+    font: 700 26px/39px 'Montserrat Bold', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @include md {
+      font: 700 32px/48px 'Montserrat Bold', sans-serif;
+    }
+  }
+
+  .smiley-network-descr-subtitle {
+    color: #fff;
+    font: 400 22px/30px 'Muli', sans-serif;
+    margin-bottom: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include xl {
+      margin-bottom: 0;
+    }
+  }
+
+  .create-org-btn {
+    height: 60px;
+    width: 100%;
+    max-width: 313px;
+    color: #fff;
+    font: 600 16px/24px 'Montserrat SemiBold', sans-serif;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include xl {
+      margin: 0 25px;
+    }
+  }
+}

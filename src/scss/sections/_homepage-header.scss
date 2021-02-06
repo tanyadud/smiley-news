@@ -1,0 +1,88 @@
+.header-bg {
+  // background: url(/img/homepage/header-bg-mob-x2.jpg) no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 424px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @include sm {
+    height: 576px;
+  }
+
+  @include md {
+    height: 768px;
+  }
+
+  @include lg {
+    // background: url(/img/homepage/header-bg-dt-x1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 779px;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+
+  .header-content-title {
+    margin-top: 140px;
+    color: #FFF;
+    font: 50px/50px 'Montserrat Bold', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include sm {
+      margin-top: 160px;
+      font: 70px/90px 'Montserrat Bold', sans-serif;
+    }
+
+    @include md {
+      margin-top: 180px;
+    }
+
+    @include lg {
+      margin-bottom: 114px;
+      font: 100px/120px 'Montserrat Bold', sans-serif;
+    }
+
+    @include xl {
+      font: 120px/160px 'Montserrat Bold', sans-serif;
+    }
+  }
+
+  .header-btn {
+
+    /* TO DO */
+    /*height: 80px;
+      width: 313px;
+      border-radius: 40px;
+      background-color: $default-orange-btns;
+      border: none;
+      color: #FFF;
+      font: 16px/24px 'Montserrat Bold', sans-serif;
+      text-transform: uppercase;
+      cursor: pointer;*/
+
+    height: 65px;
+    width: 250px;
+    border-radius: 40px;
+    background-color: #eeb400;
+    border: none;
+    color: #FFF;
+    font: 16px/24px "Montserrat Bold", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: #c09205;
+    }
+  }
+}

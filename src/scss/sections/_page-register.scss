@@ -1,0 +1,328 @@
+// ---------- SMILEY REGISTER PAGE ---------- //
+.registration {
+  text-align: center;
+  margin-top: 172px;
+  margin-bottom: 350px;
+
+  .registration-title {
+    color: $default-text;
+    font: 700 56px/74px "Montserrat Bold", sans-serif;
+    margin-bottom: 9px;
+  }
+
+  .registration-subtitle {
+    color: $default-text;
+    font: 400 22px/36px "Muli", sans-serif;
+    max-width: 778px;
+    margin: 0 auto 59px;
+  }
+
+  h3 {
+    color: $default-text;
+    font: 700 32px/48px "Montserrat Bold", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .login-btns-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 41px !important;
+    margin-top: 0px !important;
+
+    &>* {
+      margin: 0 13px 10px !important;
+    }
+
+    @include xl {
+      flex-direction: row !important;
+    }
+  }
+
+  .registration-wrap {
+    width: 100%;
+    max-width: 762px;
+    text-align: left;
+    margin: 30px auto 0;
+
+    label {
+      color: $default-text;
+      font: 700 16px/24px "Muli", sans-serif;
+
+      input {
+        display: block;
+        margin: 7px auto 19px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 48px;
+        border: 1px solid #c7c7c7;
+        border-radius: 4px;
+        font: 400 16px/24px "Inter Regular", sans-serif;
+        color: #656565;
+        padding: 0 48px 0 16px;
+      }
+    }
+
+    .register-btn-wrap {
+      margin-top: 41px;
+    }
+
+    .register-btn {
+      border-radius: 4px;
+      background-color: $default-yellow-btns;
+      height: 48px;
+      width: 100%;
+      border: none;
+      font: 700 16px/24px "Montserrat Bold", sans-serif;
+      color: #000;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &[disabled] {
+        background-color: #e3e3de;
+      }
+    }
+
+    .pledge-that {
+      p {
+        font: 700 16px/24px "Muli", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+      }
+
+      font: 400 16px/24px "Muli",
+      sans-serif;
+      margin-top: 24px;
+
+      ul {
+        margin-left: 31px;
+        margin-bottom: 24px;
+        list-style: inherit;
+      }
+
+      li {
+        line-height: 37px;
+        padding-left: 8px;
+        color: $default-text;
+      }
+    }
+
+    .register-checkbox {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 22px;
+      cursor: pointer;
+      color: $default-text;
+      font: 400 16px/24px "Muli", sans-serif;
+      user-select: none;
+      display: table;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .register-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        border: 1px solid #c7c7c7;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: all 0.2s ease;
+
+        svg {
+          opacity: 0;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .register-checkbox input:checked~.register-checkmark {
+      background-color: $default-yellow-btns;
+      border: none;
+      transition: all 0.2s ease;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// ---------- SMILEY LOGIN PAGE ---------- //
+
+.login .socnet-login-btns,
+.login .v-facebook-login,
+.login .v-google-login button {
+  border: 1px solid #ced0d2 !important;
+  border-radius: 40px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 3px 4px 0 rgba(96, 100, 112, 0.1) !important;
+  cursor: pointer !important;
+  height: 81px !important;
+  color: $default-text !important;
+  font: 700 18px/22px "Montserrat Bold", sans-serif !important;
+  text-transform: uppercase !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: left !important;
+  padding-left: 40px !important;
+  width: 100% !important;
+
+  span {
+    margin-right: 8px !important;
+    display: flex !important;
+  }
+
+  svg {
+    display: inline-block !important;
+    height: 18px !important;
+    width: 18px !important;
+    vertical-align: text-top !important;
+  }
+
+  &.login-with-gmail-btn {
+    max-width: 281px !important;
+
+    @include xl {
+      margin-top: 0 !important;
+    }
+  }
+
+  &.login-with-facebook-btn,
+  &.login-with-linkedin-btn {
+    max-width: 325px !important;
+
+    span {
+      margin-right: 18px !important;
+    }
+  }
+}
+
+button.v-facebook-login {
+  max-width: 325px !important;
+  display: block !important;
+}
+
+.v-google-login {
+  max-width: 281px !important;
+  width: 100% !important;
+
+  svg {
+    margin-right: 30px !important;
+  }
+}
+
+.login {
+  padding-top: 48px;
+
+  .login-wrap {
+    width: 100% !important;
+    max-width: 762px !important;
+    text-align: left !important;
+    margin: 27px auto 0 !important;
+
+    label {
+      color: $default-text !important;
+      font: 700 16px/24px "Muli", sans-serif !important;
+
+      input {
+        display: block !important;
+        margin: 7px auto 21px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        height: 48px !important;
+        border: 1px solid #c7c7c7 !important;
+        border-radius: 4px !important;
+        font: 400 16px/24px "Inter Regular", sans-serif !important;
+        color: #656565 !important;
+        padding: 0 48px 0 16px !important;
+      }
+    }
+
+    .login-btn-wrap {
+      margin-top: 27px !important;
+    }
+
+    .login-btn {
+      border-radius: 4px !important;
+      background-color: $default-yellow-btns !important;
+      height: 48px !important;
+      width: 100% !important;
+      border: none !important;
+      font: 700 16px/24px "Montserrat Bold", sans-serif !important;
+      color: #000 !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+
+      &:hover {
+        background-color: #f6f162 !important;
+        box-shadow: 0 2px 28px -13px rgba(0, 0, 0, 0.4) !important;
+        color: #000 !important;
+        transition: all 0.2s ease !important;
+      }
+    }
+
+    .register-and-forgot {
+      text-align: center !important;
+      font: 400 22px/36px "Muli", sans-serif !important;
+      margin-top: 25px !important;
+
+      a,
+      span {
+        color: #324287 !important;
+      }
+
+      span {
+        margin-left: 18px !important;
+        margin-right: 6px !important;
+      }
+    }
+  }
+}
+
+/*.v-google-login{*/
+/*display: inline-flex !important;*/
+/*}*/
+.login button.v-facebook-login {
+  justify-content: flex-start !important;
+
+  img.token {
+    display: none !important;
+  }
+
+  span {
+    div {
+      display: flex !important;
+      align-items: center !important;
+
+      span {
+        margin-right: 18px !important !important;
+      }
+    }
+  }
+
+  &[disabled] {
+    display: flex !important;
+    justify-content: flex-start !important;
+
+    .loader {
+      margin-right: 12px !important;
+    }
+  }
+}

@@ -1,0 +1,263 @@
+.upcoming-talk-section {
+  padding-bottom: 20px;
+
+  @include xxl {
+    padding-bottom: 42px;
+  }
+
+  .upcoming-talk-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @include xxl {
+      display: flex;
+      justify-content: space-between;
+
+      .title-colored-block {
+        text-align: left;
+        width: 380px;
+        box-sizing: border-box;
+      }
+    }
+
+    .title-colored-block {
+      background-color: #d21217;
+      position: relative;
+      text-align: center;
+      z-index: 0;
+
+      @include xxl {
+        text-align: left;
+        padding: 0 60px 0 20px;
+
+        &:after {
+          content: '';
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          left: -30vw;
+          background-color: #d21217;
+          z-index: -1;
+        }
+      }
+
+      .smiley-talks-main-title {
+        padding-top: 25px;
+
+        img {
+          width: 100%;
+          max-width: 170px;
+        }
+
+        p {
+          color: #fff;
+          font: 400 14px/17px 'Montserrat Regular', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 17px;
+          position: absolute;
+          display: inline-block;
+          top: 62px;
+          right: 50.3%;
+          margin: 0;
+          transform: translateX(50%);
+        }
+
+        @include custom-width(1300px) {
+          img {
+            max-width: 255px;
+          }
+
+          p {
+            top: 85px;
+            letter-spacing: 30px;
+          }
+        }
+
+        @include xxl {
+          padding-top: 60px;
+
+          p {
+            right: 244px;
+            top: 121px;
+          }
+        }
+      }
+
+      .upcoming-block-register {
+        color: #fff;
+        font: 700 32px/39px 'Montserrat Bold', sans-serif;
+        margin: 9px 0 0;
+
+        @include md {
+          margin-top: 15px;
+          margin-bottom: 16px;
+        }
+
+        @include xxl {
+          margin-top: 10px;
+          margin-bottom: 17px;
+        }
+      }
+
+      .upcoming-block-descr {
+        color: #fff;
+        font: 400 16px/24px 'Muli', sans-serif;
+        padding-bottom: 52px;
+        margin: 10px 30px 0;
+
+        @include md {
+          margin-top: inherit;
+        }
+
+        @include xxl {
+          margin: 0;
+        }
+      }
+    }
+
+    .upcoming-info-block {
+      margin-top: 17px;
+
+      @include xxl {
+        margin-left: 42px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      .upcoming-info-title {
+        color: $default-text;
+        font: 700 20px/48px 'Montserrat Bold', sans-serif;
+        text-transform: uppercase;
+        margin: 0 0 4px;
+
+        @include lg {
+          font: 700 32px/48px 'Montserrat Bold', sans-serif;
+          margin-bottom: 8px;
+        }
+
+        @include custom-width(1190px) {
+          text-align: center;
+          transform: translateX(-373px);
+        }
+
+        @include xxl {
+          transform: none;
+          text-align: left;
+          margin-top: -4px;
+        }
+      }
+
+      .talk-card {
+        width: 100%;
+        max-width: none;
+
+        .pic-wrap {
+          height: auto;
+        }
+
+        .talk-card-checkbox {
+          display: none;
+        }
+
+        .info-wrap {
+          border: 1px solid #e7e8e7;
+          border-top: none;
+
+          .info-border {
+            padding: 17px 22px 20px 14px;
+          }
+
+          h2 {
+            color: $default-text;
+            font: 700 32px/38px 'Montserrat Bold', sans-serif;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 1px;
+
+            @include xxl {
+              margin-bottom: 12px;
+            }
+          }
+
+          p {
+            margin-bottom: 17px;
+          }
+        }
+
+        @include lg {
+          flex-direction: row;
+
+          .smiley-img-wrap {
+            height: 34.879vw;
+
+            .smiley-img {
+              img {
+                object-fit: cover;
+              }
+            }
+          }
+
+          .info-wrap {
+            border-top: 1px solid #e7e8e7;
+            border-left: none;
+            max-width: 396px;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+              padding-top: 0;
+            }
+          }
+        }
+
+        @include custom-width(1100px) {
+          display: flex;
+          justify-content: center;
+        }
+
+        @include xl {
+          .smiley-img-wrap {
+            height: 32vw;
+            max-width: 762px;
+          }
+
+          .info-wrap {
+            .info-border {
+              padding: 46px 40px 22px 30px;
+            }
+
+            .attending-info {
+              padding: 16px 10px 21px 30px;
+            }
+          }
+        }
+
+        @include xxl {
+          .smiley-img-wrap {
+            height: 475px;
+          }
+
+          .info-wrap {
+            .info-border {
+              p {
+                margin-top: 5px;
+              }
+
+              .date-and-time-wrap {
+                margin-top: 26px;
+                margin-bottom: 0;
+              }
+
+              .date-and-time-info {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.event-partners {
+  padding: 0 15px;
+
+  @include xl {
+    padding: 0;
+  }
+
+  .event-partners-wrap {
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .event-partners-title {
+    color: $default-text;
+    font: 700 20px/32px "Montserrat Bold", sans-serif;
+    margin-top: 64px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .event-partners-cards {
+    display: flex;
+    // margin-left: -15px;
+    // margin-right: -15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 17px;
+      background-color: #fff;
+      top: 0px;
+      left: 0px
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0px;
+    }
+
+    &__sides {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      left: 0px;
+      top: 0px;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 11px;
+        background-color: #fff;
+        top: 0px;
+        left: 0px
+      }
+
+      &::after {
+        left: auto;
+        right: 0px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      object-fit: contain;
+    }
+
+    &__holder {
+      width: 25%;
+      border: 1px solid #e4e4e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -.5px;
+      padding: 10px 5px;
+      box-sizing: border-box;
+
+      @include mdMax {
+        width: calc(100% / 3);
+      }
+
+      @include smMax {
+        width: 50%;
+      }
+    }
+  }
+}

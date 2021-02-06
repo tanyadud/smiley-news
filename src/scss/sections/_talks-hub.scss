@@ -1,0 +1,133 @@
+.create-hub-section {
+  margin-bottom: 40px;
+
+  @include lg {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  @include xxl {
+    margin-top: 88px;
+    margin-bottom: 130px;
+  }
+
+  .create-hub-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include xl {
+      flex-direction: row;
+      position: relative;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1530px;
+      margin: 0 auto;
+    }
+  }
+
+  .create-hub-video {
+    order: 2;
+    height: 66.7vw;
+    max-height: 595px;
+    max-width: 892px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    @include xl {
+      order: 1;
+      margin-left: 9%;
+      height: auto;
+
+      img {}
+    }
+  }
+
+  .create-hub-content {
+    padding: 32px 32px 34px;
+    background-color: #ffff00;
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+      order: 2;
+      max-width: 407px;
+      width: 100%;
+      box-sizing: border-box;
+      align-self: normal;
+      justify-content: center;
+    }
+
+    @include custom-width(1400px) {
+      max-width: 534px;
+    }
+
+    @include xxl {
+      padding: 90px 50px 20px 40px;
+      justify-content: flex-start;
+    }
+  }
+
+  .create-hub-logo {
+    height: 123px;
+    display: inline-block;
+    margin-right: 32px;
+
+    img {
+      height: 100%;
+    }
+
+    @include xl {
+      position: absolute;
+      z-index: 2;
+      margin-left: 0;
+      width: 359px;
+      height: 318px;
+      left: 0;
+      top: 0;
+      transform: translate(0, 43%);
+      margin-top: 3px;
+      background-color: #ffff00;
+      text-align: center;
+
+      img {
+        transform: translateY(38px);
+        height: 244px;
+      }
+    }
+  }
+
+  .create-hub-title-wrap {
+    color: $default-text;
+    font: 700 44px/42px 'Montserrat Bold', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    padding-right: 20px;
+    align-self: center;
+
+    @include xxl {
+      font: 700 56px/74px 'Montserrat Bold', sans-serif;
+    }
+  }
+
+  .create-hub-title {
+    align-self: center;
+  }
+
+  .create-hub-text {
+    margin-top: 12px;
+  }
+
+  .create-hub-descr {
+    color: $default-text;
+    font: 400 22px/30px 'Muli', sans-serif;
+    margin-bottom: 23px;
+
+    @include xxl {
+      margin-bottom: 58px;
+    }
+  }
+}

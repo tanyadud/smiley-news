@@ -1,0 +1,49 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include smMax {
+    width: 100%
+  }
+
+  .video__container {
+    img {
+      width: 100%;
+    }
+
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  .video__content {
+    padding-top: 24px;
+  }
+
+  .video__title {
+    color: $default-text;
+    font-family: 'Montserrat Bold', sans-serif;
+    text-transform: uppercase;
+    @include font-size(1.2rem);
+    margin: 0px 0px 12px 0px;
+
+  }
+
+  .video__subtitle {
+    color: $default-text;
+    font-family: 'Muli', sans-serif;
+
+    @include font-size(1.1rem);
+  }
+}

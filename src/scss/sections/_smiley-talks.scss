@@ -1,0 +1,189 @@
+// ---------- SMILEY TALKS INDEX SECTION
+
+.smiley-talks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 3px;
+  position: relative;
+
+  @include md {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-bottom: 60px;
+
+
+    .smiley-talks-left,
+    .smiley-talks-center {
+      width: 48%;
+    }
+
+    &:before {
+      content: '';
+      border-top: 1px solid #E4E4E4;
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      max-width: 1530px;
+    }
+  }
+
+  @include xxl {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .smiley-talks-left {
+    margin-bottom: 18px;
+
+    @include md {
+      max-width: 360px;
+    }
+
+    .smiley-talks-main-title {
+      text-align: center;
+      background-color: #D21217;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: 19px;
+
+      img {
+        width: 100%;
+        max-width: 170px;
+      }
+
+      p {
+        color: #fff;
+        font: 400 14px/17px 'Montserrat Regular', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 17px;
+        position: absolute;
+        display: inline-block;
+        top: 56px;
+        right: 50%;
+        margin: 0;
+        transform: translateX(50%);
+      }
+
+      @include md {
+        position: relative;
+        height: 190px;
+        padding: 0;
+
+        img {
+          max-width: 255px;
+          transform: translateY(60px);
+        }
+
+        p {
+          transform: none;
+          left: 77px;
+          top: 121px;
+          right: auto;
+          letter-spacing: 30px;
+        }
+      }
+    }
+
+    >p {
+      color: $default-text;
+      font: 400 16px/24px 'Muli', sans-serif;
+      margin: 62px 0 13px;
+
+      @include md {
+        margin: 19px 0 38px;
+      }
+    }
+  }
+
+  // Article stuff
+  .article-item {
+    margin-bottom: 5px;
+    text-decoration: none;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .article-title {
+    color: $default-text;
+    font: 700 20px/32px 'Montserrat Bold', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .article-subtitle {
+    color: #a1a1a1;
+    font: 600 14px/24px 'Montserrat SemiBold', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 11px;
+  }
+
+  .article-date-location {
+    display: block;
+
+    .article-date {
+      font-size: 12px;
+    }
+
+    .article-location {
+      font-size: 12px;
+      margin-left: 0px;
+    }
+  }
+
+  .smiley-talks-right {
+    padding-left: 30px;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .article-item {
+      width: calc(50% - 15px);
+      margin-bottom: 30px;
+
+      .smiley-img-wrap {
+        height: 190px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .article-item:first-child {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .smiley-img-wrap {
+        height: 190px;
+        width: calc(50% - 15px);
+        box-sizing: border-box;
+        margin-bottom: 0px;
+      }
+
+      .article-descr {
+        width: 50%;
+        box-sizing: border-box;
+        padding-left: 30px;
+      }
+    }
+  }
+}

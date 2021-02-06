@@ -1,0 +1,89 @@
+//
+//  MEDIA QUERIES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// A map of breakpoints.
+$breakpoints: (sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+@mixin xs {
+  @media only screen and (min-width: map-get($breakpoints, xs)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin smMax {
+  @media only screen and (max-width: map-get($breakpoints, sm) - 1px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin mdMax {
+  @media only screen and (max-width: map-get($breakpoints, md) - 1px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin lgMax {
+  @media only screen and (max-width: map-get($breakpoints, lg) - 1px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin xlMax {
+  @media only screen and (max-width: map-get($breakpoints, xl) - 1px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (min-width: map-get($breakpoints, xxl)) {
+    @content;
+  }
+}
+
+@mixin xxlMax {
+  @media only screen and (max-width: map-get($breakpoints, xxl) - 1px) {
+    @content;
+  }
+}
+
+@mixin custom-width ($min) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin custom-max-width ($max) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}

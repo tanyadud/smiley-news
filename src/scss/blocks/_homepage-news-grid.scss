@@ -1,0 +1,30 @@
+.news-grid {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+
+  @include lgMax {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mdMax {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .smiley-img-wrap {
+    height: 255px;
+    margin-bottom: 18px;
+  }
+
+  .article-item {
+    margin-bottom: 0px;
+
+    .article-title {
+      text-decoration: none;
+
+      a {}
+    }
+  }
+}

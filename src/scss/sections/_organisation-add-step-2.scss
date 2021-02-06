@@ -1,0 +1,201 @@
+// ---------- SMILEY REGISTER-STEP-2 PAGE ---------- //
+
+.registration-step-2{
+  text-align: center;
+  margin-top: 76px;
+  margin-bottom: 160px;
+  .registration-title{
+    color: $default-text;
+    font: 700 56px/74px 'Montserrat Bold', sans-serif;
+    margin-bottom: 10px;
+  }
+  .registration-subtitle{
+    color: $default-text;
+    font: 400 22px/36px 'Muli', sans-serif;
+    max-width: 778px;
+    margin: 0 auto 42px;
+  }
+  .registration-2{
+    width: 100%;
+    max-width: 762px;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .explanation-text{
+      font: 400 16px/36px 'Muli', sans-serif;
+      margin-left: 5px;
+    }
+    &>label{
+      color: $default-text;
+      font: 700 16px/24px 'Muli', sans-serif;
+
+      input{
+        margin: 2px auto 15px;
+        width: 100%;
+        max-width: 762px;
+        height: 48px;
+        border: 1px solid #C7C7C7;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font: 400 16px/24px 'Muli', sans-serif;
+        color: #656565;
+        padding: 0 48px 0 16px;
+      }
+    }
+    label[for="reg-location"]{
+      position: relative;
+      margin-bottom: 15px;
+      input{
+        margin-bottom: 0;
+      }
+      svg{
+        position: absolute;
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+    //.wrap-for-sector-select{
+    //  border-radius: 4px;
+    //  box-sizing: border-box;
+    //  height: 48px;
+    //  position: relative;
+    //  width: 100%;
+    //  margin-top: 8px;
+    //  select{
+    //    padding: 0 48px 0 16px;
+    //    width: 100%;
+    //    border: 1px solid #C7C7C7;
+    //    border-radius: 4px;
+    //    height: 100%;
+    //    color: #656565;
+    //    cursor: pointer;
+    //    appearance: none;
+    //    -webkit-appearance: none;
+    //    -moz-appearance: none;
+    //    &::-ms-expand{
+    //      display: none;             /* remove arrow IE     */
+    //    }
+    //    &:focus{
+    //      outline: none;
+    //    }
+    //    option{
+    //      color: $default-text;
+    //      &[disabled]{
+    //        color: #656565;
+    //      }
+    //    }
+    //
+    //  }
+    //  .select-arrows{
+    //    display: flex;
+    //    position: absolute;
+    //    right: 18px;
+    //    top: 14px;
+    //  }
+    //}
+    .occupation-btns-group-title{
+      font: 700 16px/24px 'Muli', sans-serif;
+      color: $default-text;
+      margin-top: 15px;
+      margin-bottom: 4px;
+    }
+    .occupation-type-radio-btns{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      .radio-btns-group{
+        width: 100%;
+        max-width: 205px;
+      }
+      label{
+        font: 400 16px/36px 'Muli', sans-serif;
+        color: #656565;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        span{
+          order: 2;
+          padding-left: 15px;
+          cursor: pointer;
+        }
+        input{
+          display: none;
+          &+div{
+            width: 24px;
+            height: 24px;
+            border: 1px solid #C7C7C7;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            order: 1;
+            cursor: pointer;
+          }
+          &:checked+div{
+            &:after{
+              content: '';
+              width: 13px;
+              height: 13px;
+              border-radius: 50%;
+              background-color: #000;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+      }
+    }
+    label[for="job-title"]{
+      margin-top: 34px;
+      input{
+        margin-bottom: 9px;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    label[for="organization-name"]{
+      margin-top: 16px;
+      input{
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    }
+    .register-btn-wrap{
+      margin-top: 41px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      button{
+        border-radius: 4px;
+        height: 48px;
+        width: 100%;
+        max-width: 360px;
+        font: 700 16px/24px 'Montserrat Bold', sans-serif;
+        color: #000;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+    .back-btn{
+      background: transparent;
+      border: 1px solid #c7c7c7;
+      &:hover{
+        background-color: #fff;
+        color: gray;
+        transition: .2s ease-in;
+      }
+    }
+    .next-btn{
+      background-color: $default-yellow-btns;
+      border: none;
+    }
+  }
+}

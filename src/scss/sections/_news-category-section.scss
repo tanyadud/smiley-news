@@ -1,0 +1,124 @@
+// ---------- SMILEY NEWS CATEGORY
+
+.news-category-title {
+  color: $default-text;
+  font: 700 18px/48px "Montserrat Bold", sans-serif;
+  text-transform: uppercase;
+  align-self: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+
+  @include md {
+    font: 700 32px/48px "Montserrat Bold", sans-serif;
+    padding-bottom: 9px;
+    margin: 26px 0 28px;
+  }
+}
+
+.news-category-section {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+
+  &:last-of-type {
+    margin-bottom: 50px;
+
+    @include xl {
+      margin-bottom: 97px;
+    }
+  }
+
+  .news-category-container {
+    .article-item {
+      .article-descr {
+        padding-bottom: 19px;
+      }
+
+      .article-location {
+        display: none;
+      }
+
+      .article-title {
+        text-transform: none;
+        margin-bottom: 7px;
+      }
+
+      .article-subtitle {
+        padding-right: 0;
+      }
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+
+      .article-item {
+        width: 48%;
+        margin: 0;
+
+        .smiley-img-wrap {
+          height: 27.734vw;
+        }
+      }
+    }
+
+    @include lg {
+      justify-content: space-between;
+      position: relative;
+
+      .article-item {
+        max-width: 492px;
+        width: 32%;
+        margin: 0;
+        box-sizing: border-box;
+
+        .smiley-img-wrap {
+          height: 20.443vw;
+        }
+      }
+    }
+
+    @include xxl {
+      .article-item {
+        flex-direction: column;
+        width: 100%;
+
+        .smiley-img-wrap {
+          height: 311px;
+        }
+
+        .article-descr {
+          padding-left: 0;
+        }
+
+        .article-date-location {
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+
+  .more-link-wrap {
+    width: 100%;
+    margin-top: 2px;
+
+    .read-more-link {
+      align-self: flex-start;
+    }
+
+    @include lg {
+      position: absolute;
+      right: 0;
+      top: 41px;
+      width: auto;
+    }
+  }
+
+  @include xl {
+    margin-bottom: 77px;
+  }
+}

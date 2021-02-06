@@ -1,0 +1,38 @@
+.past-talks-section {
+  padding-left: 15px;
+  margin-bottom: 23px;
+
+  >h2 {
+    color: $default-text;
+    font: 700 20px/48px 'Montserrat Bold', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+    margin-bottom: 0;
+    margin-top: 13px;
+
+    @include lg {
+      font: 700 32px/48px 'Montserrat Bold', sans-serif;
+      margin-bottom: 38px;
+      margin-top: 45px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+  }
+
+  @include xxl {
+    padding: 0 20px;
+    max-width: 1530px;
+    margin: 0 auto;
+
+    .talk-card-wrap {
+      margin-bottom: 45px;
+    }
+  }
+
+  .smiley-pagination {
+    display: none;
+
+    @include xxl {
+      display: block;
+    }
+  }
+}

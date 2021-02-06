@@ -1,0 +1,298 @@
+@import "~rfs/scss";
+
+:root {
+  --swiper-pagination-color: #f4ed3b;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid rgba(57, 57, 57, .3);
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  position: static;
+  margin-top: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+.smiley-pagination {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  br {
+    display: none;
+  }
+}
+
+.app-pagination {
+  background-color: #f3f3f3;
+  font-family: "Montserrat Regular";
+  padding: 5px;
+  display: inline-block !important;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+  li {
+    display: inline-block;
+    width: 48px;
+
+    @include sm {
+      width: auto
+    }
+  }
+
+  .active {
+    a {
+      background-color: #f4ed3b;
+      font-family: "Montserrat Bold", sans-serif;
+    }
+  }
+
+  a {
+    color: $default-text;
+    text-decoration: none;
+    line-height: 48px;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 6px 10px;
+  }
+
+  svg {
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
+
+
+  .smiley-pagination-back,
+  .smiley-pagination-next {
+    margin: 0;
+    width: 71px;
+  }
+
+  .smiley-pagination-back {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 21C15.744 21 15.488 20.902 15.293 20.707L7.29301 12.707C6.90201 12.316 6.90201 11.684 7.29301 11.293L15.293 3.293C15.684 2.902 16.316 2.902 16.707 3.293C17.098 3.684 17.098 4.316 16.707 4.707L9.41401 12L16.707 19.293C17.098 19.684 17.098 20.316 16.707 20.707C16.512 20.902 16.256 21 16 21Z' fill='%231A1A1A' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 8px;
+    background-size: 12px;
+  }
+
+  .smiley-pagination-next {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.99999 21C8.25599 21 8.51199 20.902 8.70699 20.707L16.707 12.707C17.098 12.316 17.098 11.684 16.707 11.293L8.70699 3.29301C8.31599 2.90201 7.68399 2.90201 7.29299 3.29301C6.90199 3.68401 6.90199 4.31601 7.29299 4.70701L14.586 12L7.29299 19.293C6.90199 19.684 6.90199 20.316 7.29299 20.707C7.48799 20.902 7.74399 21 7.99999 21Z' fill='%231A1A1A' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 8px;
+    background-size: 12px;
+  }
+}
+
+// Sweet alert styles
+.swal2-container {
+  .swal2-popup {
+    border-radius: 0px;
+    width: 42em;
+  }
+
+  .swal2-title {
+    font-family: "Montserrat SemiBold", sans-serif;
+    @include font-size(1.5rem);
+  }
+
+  .swal2-content {
+    font-family: "Montserrat Regular",
+      sans-serif;
+    @include font-size(1.1rem);
+    line-height: 1.45;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include smMax {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .swal2-actions {
+    font: 700 16px/24px "Montserrat Bold",
+      sans-serif;
+    display: flex;
+    flex-direction: row;
+
+    button {
+      text-transform: uppercase;
+      border-radius: 3px;
+      color: #393939;
+      width: calc(50% - 25px);
+      border: 1px solid transparent;
+
+      @include smMax {
+        width: 100%;
+      }
+    }
+
+    .swal2-confirm {
+      background-color: #FFEC00
+    }
+
+    .swal2-cancel {
+      background: transparent;
+      border: 1px solid #C7C7C7;
+    }
+  }
+}
+
+/**
+  * Default button
+  */
+.btn {
+  border: none;
+  box-sizing: border-box;
+  background-color: #eeb400;
+  border-radius: 4px;
+  color: #fff;
+  max-width: 218px;
+  text-transform: uppercase;
+  font: 700 16px/24px "Montserrat Bold",
+    sans-serif;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  padding: 15px 15px;
+  margin: 24px auto 24px auto;
+  display: block;
+}
+
+/**
+  * Organisation - tabs content
+  */
+.organization-tabs .content-tab {
+  font: 400 22px/36px 'Muli',
+    sans-serif;
+  padding-top: 24px;
+
+  h2 {
+    padding-top: 19px;
+    margin-bottom: 13px;
+
+    @include xl {
+      padding-top: 37px;
+      margin-bottom: 22px;
+    }
+  }
+
+  p {
+    color: $default-text;
+    font: 400 22px/36px 'Muli', sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+// Section banner
+.banner-section {
+  background-color: #eeb400;
+  max-width: 1530px;
+  padding: 35px 25px;
+  box-sizing: border-box;
+  margin: 0 auto 48px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  p {
+    color: #fff;
+    margin-top: 0px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .banner-section__top {
+    width: 40%;
+    box-sizing: border-box;
+    padding-right: 20px;
+
+    @include xxlMax {
+      width: 250px;
+    }
+
+    @include lgMax {
+      width: 100%;
+      padding: 0px;
+      text-align: center;
+    }
+  }
+
+  .banner-section__category {
+    font: 400 14px/17px "Montserrat Bold", sans-serif;
+    letter-spacing: 30px;
+  }
+
+  .banner-section__bottom {
+    width: 60%;
+    box-sizing: border-box;
+    text-align: right;
+    padding-left: 20px;
+
+    @include xxlMax {
+      width: auto;
+      flex: 1;
+    }
+
+    @include lgMax {
+      display: none;
+    }
+  }
+
+  .banner-section__title {
+    font: 700 32px/39px "Montserrat Bold", sans-serif;
+    margin-bottom: 24px;
+  }
+
+  .banner-section__description {
+    font: 400 16px/20px "Muli", sans-serif;
+  }
+}
+
+.section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+// Popover
+div[data-popover] {
+  background: #393939;
+  color: #f9f9f9;
+  text-align: center;
+
+  @include font-size(.8rem);
+  line-height: 1.5;
+  margin: 5px;
+  padding: 5px;
+}
+
+.popover-icon {
+  margin-left: 12px;
+}

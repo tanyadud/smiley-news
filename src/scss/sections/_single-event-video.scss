@@ -1,0 +1,80 @@
+.event-videos {
+  padding: 0 15px;
+
+  @include xl {
+    padding: 0;
+  }
+
+  .event-videos-wrap {
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .event-videos-title {
+    color: $default-text;
+    font: 700 20px/32px "Montserrat Bold", sans-serif;
+    margin-top: 64px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+  .event-videos-cards {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include xl {
+      padding-right: 200px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-left: 15px;
+      margin-right: 15px;
+      object-fit: contain;
+    }
+  }
+}
+
+.event-videos .event-videos-cards {
+  padding-right: 0px;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.video-card {
+  position: relative;
+  // padding-bottom: 56.25%;
+  // height: 0;
+  overflow: hidden;
+  // max-width: 100%;
+  width: calc((100% / 2) - 32px);
+  margin: 16px;
+
+  @include smMax {
+    width: 100%;
+  }
+
+  &::after {
+    padding-top: 56.25%;
+    display: block;
+    content: "";
+  }
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}

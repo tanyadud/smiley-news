@@ -1,0 +1,82 @@
+.invite-friends {
+  padding: 0 15px;
+
+  @include xl {
+    padding: 0 0 20px;
+  }
+
+  text-align: center;
+
+  @include lg {
+    text-align: left;
+  }
+
+  .invite-friends-title {
+    color: $default-text;
+    font: 700 20px/32px "Montserrat Bold", sans-serif;
+    text-transform: uppercase;
+    margin-top: 27px;
+    margin-bottom: 20px;
+
+    &:after {
+      margin-top: 8px;
+      content: "";
+      border-bottom: 1px solid #e4e4e4;
+      display: block;
+    }
+  }
+
+  .invite-friends-form-wrap {
+    input {
+      width: 100%;
+      max-width: 821px;
+      height: 48px;
+      text-indent: 16px;
+      box-sizing: border-box;
+      border: 1px solid #c7c7c7;
+      border-radius: 4px;
+      font: 400 16px/24px "Montserrat Regular", sans-serif;
+
+      &::placeholder {
+        color: #656565;
+        font: 400 16px/24px "Muli", sans-serif;
+      }
+    }
+
+    .invite-btn {
+      margin-top: 25px;
+
+      @include lg {
+        margin-top: 0;
+        margin-left: 26px;
+      }
+    }
+
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+
+      label {
+        width: 100%;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    max-width: 309px;
+    height: 48px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font: 700 16px/24px "Montserrat Bold", sans-serif;
+    cursor: pointer;
+    background-color: $default-red-btns;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      background-color: #bd0000;
+      transition: 0.2s ease-in;
+    }
+  }
+}

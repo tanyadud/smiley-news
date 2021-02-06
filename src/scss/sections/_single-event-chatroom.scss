@@ -1,0 +1,56 @@
+.chatroom-btn-section {
+  padding: 0 15px;
+
+  @include xl {
+    padding: 0;
+  }
+
+  .chatroom-btn-section-wrap {
+    &:after {
+      margin-top: 28px;
+      content: "";
+      border-bottom: 1px solid #e4e4e4;
+      display: block;
+
+      @include lg {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .chatroom-btn-wrap {
+    text-align: center;
+
+    @include lg {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 102px;
+    }
+
+    .chatroom-btn-title {
+      color: $default-text;
+      font: 700 20px/32px "Montserrat Bold", sans-serif;
+      text-transform: uppercase;
+    }
+
+    button {
+      width: 100%;
+      max-width: 309px;
+      height: 48px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font: 700 16px/24px "Montserrat Bold", sans-serif;
+      cursor: pointer;
+      background-color: $default-red-btns;
+      border: none;
+      color: #fff;
+
+      &:hover {
+        background-color: #bd0000;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+}

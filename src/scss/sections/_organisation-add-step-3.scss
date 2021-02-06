@@ -1,0 +1,178 @@
+.registration-step-3{
+  text-align: center;
+  margin-top: 74px;
+  margin-bottom: 160px;
+  .registration-title{
+    color: $default-text;
+    font: 700 56px/74px 'Montserrat Bold', sans-serif;
+    max-width: 864px;
+    margin: 0 auto 10px;
+  }
+  .registration-3{
+    width: 100%;
+    max-width: 762px;
+    text-align: left;
+    margin: 52px auto 0;
+    display: flex;
+    flex-direction: column;
+    .support-type-radio-btns{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 17px;
+      .radio-btns-group{
+        width: 100%;
+      }
+      label{
+        font: 400 16px/36px 'Muli', sans-serif;
+        color: #656565;
+        display: flex;
+        align-items: center;
+        margin: 9px 0 9px;
+        span{
+          order: 2;
+          margin-left: 15px;
+          cursor: pointer;
+        }
+        input{
+          display: none;
+          &+div{
+            width: 24px;
+            height: 24px;
+            border: 1px solid #C7C7C7;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            order: 1;
+          }
+          &:checked+div{
+            &:after{
+              content: '';
+              width: 13px;
+              height: 13px;
+              border-radius: 50%;
+              background-color: #000;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+      }
+    }
+    label[for="reg-offer"],
+    label[for="reg-support"]{
+      font: 700 16px/24px 'Muli', sans-serif;
+      text-transform: uppercase;
+      color: $default-text;
+    }
+    .wrap-for-offer-select,
+    .wrap-for-support-select{
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 48px;
+      position: relative;
+      width: 100%;
+      max-width: 312px;
+      margin-top: 17px;
+      margin-bottom: 112px;
+      select{
+        padding: 0 48px 0 16px;
+        width: 100%;
+        border: 1px solid #C7C7C7;
+        border-radius: 4px;
+        height: 100%;
+        color: #656565;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        &::-ms-expand{
+          display: none;             /* remove arrow IE     */
+        }
+        &:focus{
+          outline: none;
+        }
+        option{
+          color: $default-text;
+          &[disabled]{
+            color: #656565;
+          }
+        }
+
+      }
+      .select-arrows{
+        display: flex;
+        position: absolute;
+        right: 18px;
+        top: 14px;
+      }
+    }
+    .add-another-one{
+      margin-top: 40px;
+      a{
+        font: 700 16px/24px 'Muli', sans-serif;
+        text-decoration: none;
+        color: $default-text;
+        position: relative;
+        padding-left: 60px;
+        &:before{
+          content: '+';
+          font: 400 36px/36px 'Montserrat Regular', sans-serif;
+          color: #fff;
+          position: absolute;
+          z-index: 1;
+          left: 14px;
+          top: -8px;
+          //transform: translate(50%,50%);
+        }
+        &:after{
+          content: '';
+          height: 46px;
+          width: 46px;
+          background-color: #656565;
+          border-radius: 50% ;
+          position: absolute;
+          left: 0;
+          top: -13px;
+          z-index: 0;
+        }
+      }
+    }
+    .register-btn-wrap{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include md{
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      button{
+        border-radius: 4px;
+        height: 48px;
+        width: 100%;
+        max-width: 360px;
+        font: 700 16px/24px 'Montserrat Bold', sans-serif;
+        color: #000;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+    }
+    .back-btn{
+      background: transparent;
+      border: 1px solid #c7c7c7;
+      &:hover{
+        background-color: #fff;
+        color: gray;
+        transition: .2s ease-in;
+      }
+    }
+    .next-btn{
+      background-color: $default-yellow-btns;
+      border: none;
+    }
+  }
+}

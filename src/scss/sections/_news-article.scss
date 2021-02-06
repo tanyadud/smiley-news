@@ -1,0 +1,411 @@
+// ---------- SMILEY NEWS ARTICLE PAGE ---------- //
+
+.news-article {
+  .article-header {
+    display: flex;
+    flex-direction: column;
+
+    @include xl {
+      flex-direction: row;
+    }
+
+    .smiley-img-wrap {
+      width: 100%;
+
+      @include xl {
+        max-width: 1028px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .article-descr {
+      @include xl {
+        width: 45%;
+        max-width: 492px;
+        margin-left: 38px;
+      }
+
+      .article-descr-title {
+        color: $default-text;
+        font: 700 32px/48px 'Montserrat Bold', sans-serif;
+        margin-bottom: 30px;
+
+        @include md {
+          font: 700 40px/60px 'Montserrat Bold', sans-serif;
+        }
+
+        @include xl {
+          margin-top: 0;
+        }
+
+        @include xxl {
+          font: 700 56px/74px 'Montserrat Bold', sans-serif;
+        }
+      }
+
+      //.speaker-item{
+      //  display: flex;
+      //  margin-bottom: 16px;
+      //  @include xl{
+      //    &:last-of-type{
+      //      margin-bottom: 7px;
+      //    }
+      //  }
+      //  .speaker-avatar-wrap{
+      //    height: 64px;
+      //    width: 64px;
+      //    border-radius: 50%;
+      //    margin-right: 15px;
+      //    .speaker-avatar{
+      //      position: relative;
+      //    }
+      //    .avatar-icon{
+      //      width: 64px;
+      //      height: 64px;
+      //      background-color: #656565;
+      //      border-radius: 50%;
+      //    }
+      //    .avatar-icon,
+      //    span{
+      //      position: absolute;
+      //    }
+      //    span{
+      //      text-transform: uppercase;
+      //      font: 700 20px/32px 'Montserrat Bold', sans-serif;
+      //      color: #fff;
+      //      transform: translate(-50%, 50%);
+      //      margin-left: 50%;
+      //    }
+      //  }
+      //  .speaker-name-caption{
+      //    display: flex;
+      //    flex-direction: column;
+      //    justify-content: center;
+      //    .speaker-name{
+      //      color: $default-text;
+      //      font: 400 20px/32px 'Muli', sans-serif;
+      //    }
+      //    .speaker-caption{
+      //      color: #656565;
+      //      font: 400 16px/24px 'Muli', sans-serif;
+      //    }
+      //  }
+      //}
+    }
+  }
+
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #979797;
+
+    @include xl {
+      flex-direction: row;
+      margin-top: 70px;
+      padding-bottom: 47px;
+    }
+
+    @include xxl {
+      margin-left: 130px;
+    }
+
+    .article-text {
+      @include xl {
+        margin-right: 50px;
+
+        p:first-of-type {
+          margin-top: 13px;
+        }
+      }
+
+      p {
+        color: $default-text;
+        font: 400 22px/36px 'Muli', sans-serif;
+
+        &.text-vs-quotes {
+          font: 600 italic 40px/46px 'Muli', sans-serif;
+          position: relative;
+
+          svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+          }
+        }
+
+        @include xl {
+          margin-bottom: 34px;
+
+          &.text-vs-quotes {
+            margin-top: 85px;
+            margin-bottom: 72px;
+
+            @include xxl {
+              left: -65px;
+
+              svg {
+                left: -65px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .like-and-share-wrap {
+      font: 600 16px/24px 'Montserrat SemiBold', sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a {
+        color: $default-text;
+        text-decoration: none;
+        display: inline-flex;
+        padding-left: 36px;
+        margin: 0 32px 20px 0;
+        position: relative;
+
+        @include xl {
+          margin-bottom: 0;
+        }
+
+        svg {
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    .related-articles {
+      @include xl {
+        max-width: 492px;
+        width: 100%;
+      }
+
+      h2 {
+        color: $default-text;
+        font: 700 32px/48px 'Montserrat Bold', sans-serif;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 8px;
+        margin-bottom: 30px;
+
+        @include xl {
+          margin-top: 0;
+        }
+      }
+
+      .article-title {
+        font: 700 20px/32px 'Montserrat Bold', sans-serif;
+        text-transform: none;
+      }
+
+      .related-articles-wrap {
+        display: flex;
+        flex-direction: column;
+
+        @include lg {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .article-item {
+          margin-right: 0;
+          margin-bottom: 28px;
+
+          @include lg {
+            width: 50%;
+            padding: 0 5px;
+            box-sizing: border-box;
+          }
+
+          @include xl {
+            width: 100%;
+            padding: 0;
+          }
+
+          .article-descr {
+            padding-bottom: 0;
+            margin-top: 0;
+          }
+
+          .article-date-location {
+            display: none;
+          }
+
+          .article-title {
+            margin-top: 16px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .comments-block {
+    max-width: 820px;
+    padding: 75px 0;
+
+    @include md {
+      margin-left: 30px;
+    }
+
+    @include xxl {
+      margin-left: 160px;
+    }
+
+    h4 {
+      color: #656565;
+      font: 400 14px/24px 'Muli', sans-serif;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .comment-item {
+      display: flex;
+
+      .commentator-avatar {
+        font: 700 16px/45px 'Muli', sans-serif;
+        max-width: 45px;
+        width: 100%;
+        height: 45px;
+        background-color: #e7e9f0;
+        border: 1px solid #d8dbd2;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 20px;
+      }
+
+      .comment {
+        width: 100%;
+      }
+
+      .comment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .commentator-name {
+          font: 700 15px/24px 'Muli', sans-serif;
+          margin-right: 40px;
+          position: relative;
+
+          &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #e7e9f0;
+            border-radius: 50%;
+            position: absolute;
+            right: -24px;
+            top: 8px;
+          }
+        }
+
+        .comment-time {
+          font: 400 14px/24px 'Muli', sans-serif;
+          text-transform: uppercase;
+        }
+
+        .comment-functionality {
+          display: flex;
+          height: 16px;
+          cursor: pointer;
+          margin-left: 18px;
+
+          span {
+            width: 4px;
+            height: 4px;
+            background-color: #616679;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 6px 3px;
+          }
+        }
+      }
+
+      .comment-content {
+        font: 400 15px/24px 'Muli', sans-serif;
+      }
+
+      .comment-footer {
+        display: flex;
+        align-items: center;
+        font: 400 15px/24px 'Muli', sans-serif;
+        margin-top: 10px;
+
+        .like-counter {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+
+          svg {
+            transform: rotate(-90deg);
+            margin: 0 10px;
+            cursor: pointer;
+          }
+        }
+
+        .comment-report {
+          margin-left: 26px;
+          cursor: pointer;
+          color: #7e8594;
+        }
+
+        .comment-reply {
+          padding-left: 28px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .comment-input {
+      height: 44px;
+      border: 1px solid #c7c7c7;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 740px;
+      margin-top: 70px;
+      display: flex;
+      justify-content: normal;
+
+      button {
+        width: 50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      input {
+        padding: 0;
+        height: 100%;
+        border: none;
+        width: 100%;
+        font: 400 16px/24px 'Muli', sans-serif;
+        text-indent: 20px;
+      }
+
+      .add-file {
+        border-right: 1px solid #c7c7c7;
+      }
+
+      .add-smile {
+        border-left: 1px solid #c7c7c7;
+
+        svg {
+          width: 22px;
+          height: 22px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}

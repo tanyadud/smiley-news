@@ -1,0 +1,41 @@
+ .textual-content {
+   color: #121212;
+   padding-bottom: 50px;
+
+   .container {
+     max-width: 1040px;
+
+     @include xl {
+       padding-left: 64px;
+       padding-right: 64px;
+       box-sizing: border-box;
+     }
+   }
+
+   .textual-content-title {
+     background: #f8f9fa;
+     padding: 45px 0;
+
+     h2 {
+       font: 600 32px/45px 'Muli', sans-serif;
+       margin: 0;
+     }
+
+   }
+
+   .textual-content-description {
+     line-height: 1.4;
+     font-family: 'Muli', sans-serif;
+     padding-top: 1.4em;
+
+     p {
+       margin-top: .7em;
+       margin-bottom: .7em;
+     }
+
+     b,
+     strong {
+       font-weight: 800;
+     }
+   }
+ }

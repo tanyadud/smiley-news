@@ -1,0 +1,414 @@
+.talk-card {
+  max-width: 337px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  position: relative;
+
+  @include md {
+    max-width: 360px;
+  }
+
+  .pic-wrap {
+
+    img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .info-wrap {
+    border: 1px solid #dcddde;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .info-border {
+      padding: 50px 30px 26px 21px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    h2 {
+      color: $default-text;
+      font: 700 20px/26px 'Montserrat Bold', sans-serif;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: $default-text;
+      font: 400 16px/20px 'Muli', sans-serif;
+      margin-top: 12px;
+      margin-bottom: 11px;
+    }
+  }
+
+  .date-and-time-wrap {
+    color: $default-text;
+    font: 700 20px/30px 'Montserrat Bold', sans-serif;
+    position: relative;
+    margin-bottom: 12px;
+
+    .date-and-time-info {
+      margin-left: 42px;
+    }
+
+    svg {
+      position: absolute;
+      width: 24px;
+      top: 4px;
+      z-index: -1;
+    }
+  }
+
+  .location-info {
+    color: $default-text;
+    font: 400 16px/20px 'Muli', sans-serif;
+    position: relative;
+
+    div {
+      margin-left: 42px;
+    }
+
+    svg {
+      position: absolute;
+      width: 24px;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .attending-info {
+    padding: 16px 10px 17px 24px;
+    border-top: 1px solid #dcddde;
+
+    span {
+      color: $default-text;
+      font: 700 16px/24px 'Muli', sans-serif;
+      margin-right: 5px;
+    }
+
+    .attending-wrap {
+      display: inline-block;
+      vertical-align: middle;
+      height: 41px;
+    }
+
+    .attendees-avatar {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      border: 2px solid #FFF;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+      }
+
+      &.next {
+        margin-left: -22px;
+      }
+    }
+  }
+
+  .talk-card-checkbox-dt {
+    position: absolute;
+    top: 218px;
+    left: 50%;
+    margin-left: -35px;
+    height: 71px;
+    width: 71px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-color: #656565;
+    box-sizing: border-box;
+    transition: .2s ease-in;
+    cursor: pointer;
+    z-index: 3;
+    outline: none;
+
+    &:hover+.overlay {
+      display: block;
+    }
+
+    &.button-clicked {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after,
+    &:before {
+      content: '';
+      height: 2px;
+      width: 16px;
+      background-color: #fff;
+      position: absolute;
+      opacity: 1;
+      top: 32px;
+      left: 50%;
+      margin-left: -8px;
+      transition: .2s ease-in;
+    }
+
+    &:before {
+      transform: rotate(90deg);
+    }
+
+    &.talk-card-checkbox-rotate {
+      transform: rotate(45deg);
+    }
+  }
+
+  .overlay {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000000aa;
+    z-index: 2;
+    box-sizing: border-box;
+    text-align: center;
+
+    span {
+      font: 700 20px/26px 'Montserrat Bold', sans-serif;
+      position: absolute;
+      top: 170px;
+      transform: translateX(-50%);
+      color: #fff;
+    }
+  }
+
+  .btns-wrap {
+    .attend {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000000aa;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+
+      button {
+        height: 48px;
+        width: 100%;
+        max-width: 320px;
+        font: 700 16px/24px 'Montserrat Bold', sans-serif;
+        background-color: #656565;
+        border: 1px solid #979797;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 320px;
+        cursor: pointer;
+        z-index: 3;
+
+        &:after,
+        &:before {
+          content: '';
+          height: 2px;
+          width: 16px;
+          background-color: #fff;
+          position: absolute;
+          opacity: 1;
+          top: 22px;
+          left: 25px;
+          margin-left: -8px;
+          transition: .2s ease-in;
+        }
+
+        &:before {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .display-none {
+      display: none;
+    }
+  }
+
+  .attend-loading {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /*animation: spin 1s linear infinite;*/
+    width: 90px;
+    height: 90px;
+    top: 210px;
+    right: 50%;
+    margin-right: -45px;
+
+    span {
+      position: absolute;
+      font: 700 16px/24px 'Montserrat Bold', sans-serif;
+      text-transform: uppercase;
+      color: #fff;
+      white-space: nowrap;
+      bottom: -50px;
+      left: -3px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: loadingRotate 1s linear infinite;
+
+      @keyframes loadingRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(180deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .outer {
+        stroke: #fff;
+        stroke-width: 15px;
+        fill: transparent;
+      }
+
+      .inner {
+        fill: transparent;
+        stroke: #d21217;
+        stroke-width: 15px;
+        stroke-dasharray: 539;
+        transition: stroke-dashoffset 1s;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        stroke-dashoffset: 481;
+      }
+    }
+  }
+
+  .attend-complete {
+    span {
+      color: #fff;
+      font: 700 20px/24px 'Montserrat Bold', sans-serif;
+      position: absolute;
+      left: 50%;
+      bottom: -45px;
+      transform: translateX(-50%);
+      top: 300px;
+      left: 50%;
+    }
+  }
+
+  .confirmed-box {
+    position: absolute;
+    top: 218px;
+    left: 50%;
+    margin-left: -35px;
+    height: 71px;
+    width: 71px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-color: #d21217;
+    box-sizing: border-box;
+    transition: .2s ease-in;
+    cursor: pointer;
+    z-index: 3;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.talk-cards-container {
+  .talk-card-checkbox {
+    position: absolute;
+    top: 218px;
+    left: 50%;
+    margin-left: -35px;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .talk-card-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 71px;
+      width: 71px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background-color: #656565;
+      box-sizing: border-box;
+      transition: .2s ease-in;
+
+      &:after,
+      &:before {
+        content: '';
+        height: 2px;
+        width: 16px;
+        background-color: #fff;
+        position: absolute;
+        opacity: 1;
+        top: 32px;
+        left: 50%;
+        margin-left: -8px;
+        transition: .2s ease-in;
+      }
+
+      &:before {
+        transform: rotate(90deg);
+      }
+
+      svg {
+        position: absolute;
+        top: 21px;
+        left: 20px;
+        opacity: 0;
+      }
+    }
+  }
+
+  .talk-card-checkbox input:checked~.talk-card-checkmark {
+    background-color: #de1c22;
+    transition: .2s ease-in;
+  }
+
+  .talk-card-checkbox input:checked~.talk-card-checkmark {
+
+    &:after,
+    &:before {
+      opacity: 0;
+      display: none;
+    }
+
+    svg {
+      transition: .2s ease-in;
+      opacity: 1;
+    }
+  }
+}
